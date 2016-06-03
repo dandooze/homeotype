@@ -1,0 +1,38 @@
+// Devevelopment debug only
+  .media-query-status {
+    background-color: rgba(red, .65);
+    color: white;
+    font-size: $fs-xsmall;
+    font-weight: 600;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    span {
+      display: block;
+      line-height: $fs-med;
+      padding: 0 .5rem;
+    } 
+    .mobile-ls,
+    .tablet-pt,
+    .tablet-ls, 
+    .desktop {
+      display: none;
+    }   
+    @include mobile-landscape-and-up {
+      .mobile-pt { display: none;}
+      .mobile-ls { display: block;}
+    }
+    @include tablet-portrait-and-up {
+      .mobile-ls { display: none;}
+      .tablet-pt { display: block;}
+    }
+    @include tablet-landscape-and-up {
+      .tablet-pt { display: none;}
+      .tablet-ls { display: block;}
+    } 
+    @include desktop-and-up {
+      .tablet-ls { display: none;}
+      .desktop { display: block;}
+    } 
+  }
