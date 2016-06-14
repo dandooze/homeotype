@@ -1,55 +1,74 @@
 ---
 title: Welcome to Kelisto
 ---
-<div class="wrapper">
-  <div id="navbar">navbar</div>
-  <div id="hero-bg" class="car-insurance">
-    <div id="hero-content" class="magic-wrapper">
-      <div id="hero-text">
-        <h1>Compara seguros de coche</h1>
-        <h2>Elije tu seguro entre más de 25 compañías, contrata online y ahorra hasta un 65%</h2>
+<div id="navbar">navbar</div>
+<main id="site-content">
+  <div class="hero">
+    <div id="hero__background" class="car-insurance">
+      <video autoplay loop poster="video-cover/Snapshots/Slow-Traffic.jpg">
+        <source src="video-cover/MP4/Slow-Traffic.mp4" type="video/mp4" />
+        <source src="video-cover/OGV/Slow-Traffic.ogv" type="video/ogv" />
+        <source src="video-cover/WEBM/Slow-Traffic.webm" type="video/webm" />
+      </video>
+    </div>
+    <div class="hero__content">
+      <!-- video cover -->
+      <div class="hero__va">
+        <div class="hero__ma">
+          <div class="magic-wrapper">
+            <div class="hero__text">
+              <!--
+              <h1>Descubre cuánto puedes ahorrar en tus facturas del hogar</h1>
+              <h2>Compara seguros de coche, tarifas de móvil, cuentas, hipotecas, préstamos y mucho más.</h2>
+              -->
+              <h1>Compara seguros de coche</h1>
+              <h2>Elije tu seguro entre más de 25 compañías, contrata online y ahorra hasta un 65%</h2>
+            </div>
+            <div class="hero__cta">
+              <a class="btn btn-cta btn-normal"> Compara Ahora </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="main-cta magic-wrapper">
-      <a class="btn btn-cta btn-normal"> Compara Ahora </a>
-    </div>
+      <!-- /video cover -->
+    </div><!-- /hero__content -->
   </div>
   <div id="launchpad">
     <ul class="magic-wrapper">
       <li class="launchpad-item">
-        <a href="#" class="hero-switch" data-item="seguros">
+        <a href="#" class="hero-switch" data-item="prestamos">
           <i class="kg-coin-receive"></i> 
-          Prestamos
+          <span class="launchpad-text">Prestamos</span>
         </a>
       </li>
       <li class="launchpad-item">
         <a href="#" class="hero-switch" data-item="hipotecas">
           <i class="kg-house-price"></i> 
-          Hipotecas
+          <span class="launchpad-text">Hipotecas</span>
         </a>
       </li>
       <li class="launchpad-item">
         <a href="#" class="hero-switch" data-item="cuentas">
           <i class="kg-piggy-bank"></i> 
-          Cuentas Bancarias
+          <span class="launchpad-text">Cuentas Bancarias</span>
         </a>
       </li>
       <li class="launchpad-item">
         <a href="#" class="hero-switch" data-item="seguros">
           <i class="kg-car"></i> 
-          Seguros de coche
+          <span class="launchpad-text">Seguros de coche</span>
         </a>
       </li>
       <li class="launchpad-item">
         <a href="#" class="hero-switch" data-item="internet">
           <i class="kg-wifi-modem-2"></i> 
-          Internet
+          <span class="launchpad-text">Internet</span>
         </a>
       </li>
       <li class="launchpad-item">
-        <a href="#">
+        <a href="#" class="hero-switch" data-item="electricidad">
           <i class="kg-lightbulb-4"></i> 
-          Electricidad
+          <span class="launchpad-text">Electricidad</span>
         </a>
       </li>
     </ul>
@@ -66,4 +85,4 @@ title: Welcome to Kelisto
       </div>
     </div>
   </div>
-</div><!-- .wrapper -->
+</main><!-- .main -->

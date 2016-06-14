@@ -8,6 +8,7 @@
     top: 0;
     left: 0;
     text-transform: uppercase;
+    z-index: 2000;
     span {
       display: block;
       line-height: $fs-med;
@@ -16,6 +17,7 @@
     .mobile-ls,
     .tablet-pt,
     .tablet-ls, 
+    .tablet-ex, 
     .desktop {
       display: none;
     }   
@@ -27,10 +29,19 @@
       .mobile-ls { display: none;}
       .tablet-pt { display: block;}
     }
-    @include tablet-landscape-and-up {
+    
+    @include tablet-extra-and-up {
       .tablet-pt { display: none;}
+      .tablet-ex { display: block;}
+    } 
+    
+    @include tablet-landscape-and-up {
+      .tablet-ex { display: none;}
       .tablet-ls { display: block;}
     } 
+    
+
+    
     @include desktop-and-up {
       .tablet-ls { display: none;}
       .desktop { display: block;}

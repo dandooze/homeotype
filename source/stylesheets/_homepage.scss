@@ -1,67 +1,178 @@
+$mq-tablet-extra:          55rem;    //880px @ 16px
+
+@mixin tablet-extra-and-up {
+@media only screen and (min-width : $mq-tablet-extra) {
+  @content;
+  }
+}
+
 #navbar {
-  background-color: $c-corporate;
+  background-color: rgba($c-corporate, .85);
+  box-shadow: 0px 1px 1px 0px rgba(black, .4);
   color: white;
   font-size: $fs-small;
   line-height: 3rem;
   text-align: center;
-  text-transform: uppercase
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
 }
 
-
-#hero-bg {
-  background-size: cover;
-  background-position: left top;
-  min-height: 320px;
-  @include transition(all .25s ease-in-out);
-  @include tablet-landscape-and-up {
-    min-height: 480px;
+.hero {
+  height: 360px;
+  position: relative;
+  @include mobile-landscape-and-up {
+    height: 460px;
   }
+  @include tablet-portrait-and-up {
+    height: 500px;
+  }
+  
+  @include desktop-and-up {
+    height: 540px;
+  }
+}
+
+#hero__background {
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  
+  video {
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: auto;
+    @include tablet-extra-and-up {
+      height: auto;
+      width: 100%;
+    }
+  }
+  &.cover {
+    background: none;
+    video {
+      display: block;
+    }
+  }
+
+  &.loans {
+    background-image: url("../images/prestamos-compressed.jpg");
+    background-position: left top;
+    @include tablet-landscape-and-up {
+      background-position: left 60%;
+    }
+  }
+  
+  &.mortgages {
+    background-image: url("../images/hipotecas-compressed.jpg");
+    background-position: 90% top;
+    @include tablet-portrait-and-up {
+      background-position: right bottom;
+    }
+    
+    @include desktop-and-up {
+      background-position: right 70%;
+    }
+  }
+  
+  &.bank-account {
+    background-image: url("../images/cuentas-compressed.jpg");
+    background-position: left 70%;
+  }
+  
   &.car-insurance {
     background-image: url("../images/seguros_coche.jpg");
   }
-  &.adsl {
+  
+  &.internet {
     background-image: url("../images/internet+fijo.jpg");
     background-position: left 40%;
   }
-}
-
-#hero-content {
-  min-height: 244px;
-  padding-top: 2rem;
-  position: relative;
-  @include mobile-landscape-and-up {
-    min-height: 220px;
-  }
   
-  @include tablet-landscape-and-up {
-    min-height: 320px;
-    padding-top: 3rem;
-  }
-  
-  #hero-text {
-    @include span-columns(4,6);
+  &.electricity {
+    background-image: url("../images/electricidad.jpg");
+    background-position: left top;
     @include mobile-landscape-and-up {
-      @include span-columns(4,8);
-    }
-  }
-  
-  h1 {
-    margin-bottom: .25rem;
-  }
-  h2 {
-    color: $c-new-black;
-    font-size: $fs-med;
-    font-weight: 400;
-    margin: 0;
-    @include tablet-portrait-and-up {
-      font-size: $fs-lrg;
+      background-position: left bottom;
     }
     @include tablet-landscape-and-up {
-      font-size: $fs-xlrg;
+      background-position: left 55%;
+    }
+  }
+  
+}
+
+.hero__content {
+  height: 100%;
+  position: relative;
+  z-index: 2;
+
+  .hero__va {
+    display: table;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .hero__ma {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .hero__text {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    @include span-columns(5,6);
+    @include mobile-landscape-and-up {
+      @include span-columns(4,6);
+      padding-top: 0;
+    }
+    @include tablet-portrait-and-up {
+      @include span-columns(6,12);
+      padding-top: 0;
+    }
+    h1 {
+      font-weight: 600;
+      margin-bottom: .25rem;
+    
+    }
+  
+    h2 {
+      color: $c-new-black;
+      font-size: $fs-med;
+      font-weight: 300;
+      margin: 0;
+      @include mobile-landscape-and-up {
+        font-size: $fs-lrg;
+      }
+      @include tablet-landscape-and-up {
+        font-size: $fs-xxlrg;
+      }
+    }
+  }
+  
+  .hero__cta {
+    @include span-columns(12,12);
+    a.btn-cta {
+      width: 100%;
+      @include mobile-landscape-and-up {
+        width: auto;
+      }
+      @include tablet-landscape-and-up {
+        font-size: $fs-med;
+        line-height: 4rem;
+      }
     }
   }
 }
 
+  
 .main-cta {
   a.btn {
     width: 100%;
@@ -78,23 +189,19 @@
 #launchpad {
   box-shadow: 0px -1px 1px 0px rgba(black,.2);
     ul {
-    background: white;
-    margin-bottom: 0;
-//    padding-bottom: .25rem;
-    padding-top: .25rem;
-  }
-  li.launchpad-item {
-    font-size: $fs-xsmall;
-    margin-bottom: 0;
-    min-height: 6rem;
-    text-align: center;
-    text-transform: uppercase;
-    @include span-columns(4,12);
-    &:nth-child(3n) {
-      border-right: none;
-      @include omega();
+      background: white;
+      margin-bottom: 0;
     }
-    @include tablet-portrait-and-up {
+    li.launchpad-item {
+      margin-bottom: 0;
+      min-height: 6rem;
+      text-align: center;
+      text-transform: uppercase;
+      @include span-columns(4,12);
+      &:nth-child(3n) {
+        @include omega();
+      }
+      @include tablet-portrait-and-up {
       @include span-columns(2,12);
       &:nth-child(3n) {
         @include remove-omega;
@@ -105,17 +212,41 @@
     }
 
     a {
-      display: block;
       color: $c-new-black;
-      padding: 1.5rem 0 .5rem;
-      text-decoration: none;
-    }
-    i {
       display: block;
-      margin: auto;
-      font-size: 1.5rem;
+      font-size: $fs-xsmall;
+      text-align: center;
+      text-decoration: none;
+      @include tablet-landscape-and-up {
+        font-size: $fs-small;
+        padding-bottom: 1rem;
+      }
+     i {
+      display: block;
+      font-size: $fs-xxlrg;
+      padding: 1rem 0 .25rem;
+      width: 100%;
+      @include transition(all .20s ease-in-out);
+      @include tablet-landscape-and-up {
+        font-size: $fs-xxxlrg;  
+       }
+      }
+      span.launchpad-text {
+        @include transition(all .20s ease-in-out);
+        display: block;
+      }
+      &:hover {
+        color: $c-link;
+        i {
+          transform: translateY(-5px);
+        }
+        span.launchpad-text {
+          transform: translateY(-5px);
+        }
+      }
     }
   }
+
 }
 
 .how-it-works-bg {
@@ -130,14 +261,16 @@
 
 h2.section-title {
   color: $c-new-black;
-  margin: 0 0 3rem 0;
-  font-size: $fs-med;
+  margin: 0 0 1.5rem 0;
+  font-size: $fs-lrg;
   font-weight: 300;
   text-align: center;
   @include span-columns(10,12);
-  @include push(1,12);
+  @include pre(1,12);
+  @include post(1,12);
   @include tablet-portrait-and-up {
-    @include push(0,12);
+    margin-bottom: 3rem;
+    @include pre(0,12);
     @include span-columns(12,12);
     font-size: $fs-xxlrg;
   }
@@ -145,23 +278,41 @@ h2.section-title {
 
 .how-it-works {
   .illustration {
-    @include span-columns (5,12);
-    @include push(1,12);
+    @include mobile-landscape-and-up {
+      @include span-columns(4,6);
+      @include pre(1,6);
+      @include post(1,6);
+      margin-bottom: 1rem;
+    }
+    @include tablet-portrait-and-up {
+      @include span-columns (5,12);
+      @include pre(1,12);
+    }
     img {
       display: block;
       width: 100%;
     }
   }
   .how-it-works-txt {
-    @include span-columns(5,12);
     h3 {
       color: $c-new-black;
+      margin-bottom: .5rem;
       font-size: $fs-med;
       font-weight: 600;
     }
     p {
       color: $c-grey;
       font-size: $fs-base;
+    }
+    @include mobile-landscape-and-up {
+      @include span-columns(4,6);
+      @include pre(1,6);
+      @include post(1,6);
+    }
+    @include tablet-portrait-and-up {
+      @include span-columns(5,12);
+      @include pre(0);
+      @include post(1,12);
     }
   }
 }
