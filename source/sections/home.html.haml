@@ -1,0 +1,58 @@
+---
+title: Home page
+---
+%main{id: "site-content"}
+  #navbar
+    navbar
+  .hero
+    #hero__background.video
+      %video{:autoplay => "", :loop => "", :poster => "video-cover/Snapshots/Slow-Traffic.jpg"}
+        %source{:src => "video-cover/MP4/Slow-Traffic.mp4", :type => "video/mp4"}
+        %source{:src => "video-cover/OGV/Slow-Traffic.ogv", :type => "video/ogv"}
+        %source{:src => "video-cover/WEBM/Slow-Traffic.webm", :type => "video/webm"}
+    .hero__content
+      .hero__va
+        .hero__ma
+          .magic-wrapper
+            .hero__text
+              /
+                <h1>Descubre cuánto puedes ahorrar en tus facturas del hogar</h1>
+                <h2>Compara seguros de coche, tarifas de móvil, cuentas, hipotecas, préstamos y mucho más.</h2>
+              %h1 Compara seguros de coche
+              %h2 Elije tu seguro entre más de 25 compañías, contrata online y ahorra hasta un 65%
+            .hero__cta
+              %a.btn.btn-cta.btn-normal Compara Ahora
+  #launchpad
+    %ul.magic-wrapper
+      %li.launchpad-item
+        %a.hero-switch{"data-item" => "prestamos", :href => "#"}
+          %i.kg-coin-receive
+          %span.launchpad-text Prestamos
+      %li.launchpad-item
+        %a.hero-switch{"data-item" => "hipotecas", :href => "#"}
+          %i.kg-house-price
+          %span.launchpad-text Hipotecas
+      %li.launchpad-item
+        %a.hero-switch{"data-item" => "cuentas", :href => "#"}
+          %i.kg-piggy-bank
+          %span.launchpad-text Cuentas Bancarias
+      %li.launchpad-item
+        %a.hero-switch{"data-item" => "seguros", :href => "#"}
+          %i.kg-car
+          %span.launchpad-text Seguros de coche
+      %li.launchpad-item
+        %a.hero-switch{"data-item" => "internet", :href => "#"}
+          %i.kg-wifi-modem-2
+          %span.launchpad-text Internet
+      %li.launchpad-item
+        %a.hero-switch{"data-item" => "electricidad", :href => "#"}
+          %i.kg-lightbulb-4
+          %span.launchpad-text Electricidad
+  .how-it-works-bg
+    .how-it-works.magic-wrapper
+      %h2.section-title Como funciona nuestro comparador
+      .illustration
+        %img{:src => "../images/how-it-works.png"}/
+      .how-it-works-txt
+        %h3 Con un solo formulario, obtén tu comparativa personalizada
+        %p Kelisto.es es mucho más que un comparador. Compara precios de productos de seguros, finanzas, comunicaciones y energía. Ahorra en tus facturas del hogar con Kelisto.

@@ -6,6 +6,10 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
   }
 }
 
+#site-index {
+  padding-top: 10rem;
+}
+
 #navbar {
   background-color: rgba($c-corporate, .85);
   box-shadow: 0px 1px 1px 0px rgba(black, .4);
@@ -92,7 +96,7 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
   }
   
   &.internet {
-    background-image: url("../images/internet+fijo.jpg");
+    background-image: url("../images/internet_fijo.jpg");
     background-position: left 40%;
   }
   
