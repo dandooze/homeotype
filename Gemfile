@@ -14,6 +14,15 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'middleman', '3.3.7'
 gem 'middleman-livereload'
 
+# Deploy your Middleman build via rsync, ftp, sftp, or git
+#gem 'middleman-deploy', '~> 1.0'
+
+# Puma webserver
+gem 'puma'
+
+# Serving static pages on heroku
+gem 'rack-contrib'
+
 # Style & Kelistrap
 gem 'bourbon'
 gem 'susy', '~> 1.0'
