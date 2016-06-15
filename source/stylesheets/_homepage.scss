@@ -161,14 +161,14 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
     }
     &.video__cover {
       @include mobile-landscape-and-up {
-        @include span-columns(10,12);
-        @include pre(1,12);
-        h1, h2 {
-          text-align: center;
-        }
+//        @include span-columns(10,12);
+//        @include pre(1,12);
+//        h1, h2 {
+//
+//        }
       }
       h2 {
-        color: white;
+//        color: white;
       }
     }
   }
@@ -258,7 +258,6 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
 }
 
 .section__container {
-  box-shadow: inset 0px 1px 1px 0px rgba(black,.2);
   padding: 1.5rem 0;
   @include tablet-portrait-and-up {
     padding: 3rem 0;
@@ -282,6 +281,11 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
 }
 
 .how-it-works-bg {
+  background-color: $c-sugarpaper;
+  box-shadow: inset 0px 1px 1px 0px rgba(black,.2);
+}
+
+.kelisto-videos-bg {
   background-color: $c-sugarpaper;
 }
 
