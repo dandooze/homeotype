@@ -258,9 +258,9 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
 }
 
 .section__container {
-  padding: 1.5rem 0;
+  padding: 2rem 0;
   @include tablet-portrait-and-up {
-    padding: 3rem 0;
+    padding: 4rem 0;
   }
   h2 {
     color: $c-new-black;

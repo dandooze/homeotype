@@ -47,7 +47,7 @@ GEM
     http_parser.rb (0.6.0)
     i18n (0.6.11)
     json (1.8.3)
-    kelistrap (0.3.1)
+    kelistrap (0.3.2)
       bourbon
       sass (>= 3.2.0)
       susy (~> 1.0)
