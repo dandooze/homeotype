@@ -34,9 +34,10 @@ $(document).ready(function () {
   }
   
   $(".hero-switch").on('click', function(e){
+    $(".hero__text, .hero__cta" ).removeClass('video__cover');
     itemName = $(this).data('item');
-      $(".hero__text h1").text(heroCopies[itemName]['title']);
-      $(".hero__text h2").text(heroCopies[itemName]['subtitle']);
-      $("#hero__background").removeClass().addClass(heroCopies[itemName]['heroClass']);
+    $(".hero__text h1").text(heroCopies[itemName]['title']);
+    $(".hero__text h2").text(heroCopies[itemName]['subtitle']);
+    $("#hero__background").removeClass().addClass(heroCopies[itemName]['heroClass']);
   });
 });

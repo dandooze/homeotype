@@ -59,7 +59,7 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
       width: 100%;
     }
   }
-  &.cover {
+  &.video__cover {
     background: none;
     video {
       display: block;
@@ -159,6 +159,18 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
         font-size: $fs-xxlrg;
       }
     }
+    &.video__cover {
+      @include mobile-landscape-and-up {
+        @include span-columns(10,12);
+        @include pre(1,12);
+        h1, h2 {
+          text-align: center;
+        }
+      }
+      h2 {
+        color: white;
+      }
+    }
   }
   
   .hero__cta {
@@ -173,22 +185,14 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
         line-height: 4rem;
       }
     }
+    &.video__cover {
+      display: none;
+    }
   }
 }
 
   
-.main-cta {
-  a.btn {
-    width: 100%;
-    @include mobile-landscape-and-up {
-      width: auto;
-    }
-    @include tablet-landscape-and-up {
-      font-size: $fs-med;
-      line-height: 4rem;
-    }
-  }
-}
+
 
 #launchpad {
   box-shadow: 0px -1px 1px 0px rgba(black,.2);
@@ -253,32 +257,34 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
 
 }
 
-.how-it-works-bg {
-  background-color: $c-sugarpaper;
+.section__container {
   box-shadow: inset 0px 1px 1px 0px rgba(black,.2);
   padding: 1.5rem 0;
   @include tablet-portrait-and-up {
     padding: 3rem 0;
   }
-  
+  h2 {
+    color: $c-new-black;
+    margin: 0 0 1.5rem 0;
+    font-size: $fs-lrg;
+    font-weight: 300;
+    text-align: center;
+    @include span-columns(10,12);
+    @include pre(1,12);
+    @include post(1,12);
+    @include tablet-portrait-and-up {
+      margin-bottom: 3rem;
+      @include pre(0,12);
+      @include span-columns(12,12);
+      font-size: $fs-xxlrg;
+    }
+  }  
 }
 
-h2.section-title {
-  color: $c-new-black;
-  margin: 0 0 1.5rem 0;
-  font-size: $fs-lrg;
-  font-weight: 300;
-  text-align: center;
-  @include span-columns(10,12);
-  @include pre(1,12);
-  @include post(1,12);
-  @include tablet-portrait-and-up {
-    margin-bottom: 3rem;
-    @include pre(0,12);
-    @include span-columns(12,12);
-    font-size: $fs-xxlrg;
-  }
+.how-it-works-bg {
+  background-color: $c-sugarpaper;
 }
+
 
 .how-it-works {
   .illustration {
