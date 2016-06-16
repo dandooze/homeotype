@@ -59,7 +59,7 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
       width: 100%;
     }
     @include tablet-landscape-and-up {
-//      @include transform(translateY(-50px));
+      top: -10%;
     }
     
     @include desktop-and-up {
