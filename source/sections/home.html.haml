@@ -59,5 +59,23 @@ title: Home page
   .section__container.kelisto-videos-bg
     .kelisto-videos.magic-wrapper
       %h2.section-title Los videos de kelisto.es
+      .video-box
+        .video-container
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/HPsuCbDwMvc?rel=0&controls=0&showinfo=0", :width => "560"}
+      .video-box-text
+        %p Te damos todas las claves para que ahorres en tus facturas y trucos para que consigas los mejores servicios al mejor precio, y examinamos los productos más atractivos del mercado.
+        .link-list-box 
+          %h4.link-list-title Últimos videos
+          %ul.link-list
+            %li.link-list-item
+              %i.kg-play-button-2
+              %a{:href => "#{}"} Cómo ahorrar 5.000 euros en tus facturas del hogar
+            %li.link-list-item
+              %i.kg-play-button-2
+              %a{:href => "#{}"} Cambiar de compañía electrica con Kelisto.es
+            %li.link-list-item
+              %a{:href => "#{}", :class => "link-list-see-all"} 
+                Ver todos 
+
       
       

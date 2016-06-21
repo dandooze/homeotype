@@ -27,5 +27,5 @@ gem 'rack-contrib'
 gem 'bourbon'
 gem 'susy', '~> 1.0'
 
-gem 'kelistrap'
+gem 'kelistrap' #, path: '../kelistrap'
 

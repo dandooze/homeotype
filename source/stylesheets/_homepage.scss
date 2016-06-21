@@ -253,29 +253,6 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
 
 }
 
-.section__container {
-  padding: 2rem 0;
-  @include tablet-portrait-and-up {
-    padding: 4rem 0;
-  }
-  h2 {
-    color: $c-new-black;
-    margin: 0 0 1.5rem 0;
-    font-size: $fs-lrg;
-    font-weight: 300;
-    text-align: center;
-    @include span-columns(10,12);
-    @include pre(1,12);
-    @include post(1,12);
-    @include tablet-portrait-and-up {
-      margin-bottom: 3rem;
-      @include pre(0,12);
-      @include span-columns(12,12);
-      font-size: $fs-xxlrg;
-    }
-  }  
-}
-
 .how-it-works-bg {
   background-color: $c-sugarpaper;
   box-shadow: inset 0px 1px 1px 0px rgba(black,.2);
@@ -311,7 +288,7 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
       font-weight: 600;
     }
     p {
-      color: $c-grey;
+      color: $c-new-black;
       font-size: $fs-base;
     }
     @include mobile-landscape-and-up {
@@ -323,6 +300,96 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
       @include span-columns(5,12);
       @include pre(0);
       @include post(1,12);
+    }
+  }
+}
+
+/* VIDEO SECTION */
+.kelisto-videos {
+  .video-box {
+    @include mobile-landscape-and-up {
+      @include span-columns(4,6);
+      @include pre(1,6);
+      @include post(1,6);
+      margin-bottom: 1rem;
+    }
+    @include tablet-portrait-and-up {
+      @include span-columns (5,12);
+      @include pre(1,12);
+    }
+
+    // CSS needed for the youtube iframe video to be responsive
+    .video-container {
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(black, .2);
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 0; height: 0; overflow: hidden;
+    }
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+  }
+  .video-box-text {
+    @include mobile-landscape-and-up {
+      @include span-columns(4,6);
+      @include pre(1,6);
+      @include post(1,6);
+    }
+    @include tablet-portrait-and-up {
+      @include span-columns(5,12);
+      @include pre(0);
+      @include post(1,12);
+    }
+    p {
+      color: $c-new-black;
+      font-size: $fs-base;
+    }
+    .link-list-title {
+      color: $c-new-black;
+      font-size: $fs-xsmall;
+      font-weight: 600;
+      margin: $sp-lrg 0 $sp-small;
+      text-transform: uppercase;
+    }
+    li.link-list-item {
+      border-bottom: 1px solid $c-border;
+      font-size: $fs-small;
+      padding: $sp-base 0;
+      position: relative;
+      &:last-child {
+        border-bottom: none;
+        a {
+          text-indent: 0;
+        }
+      }
+      i {
+        color: $c-corporate;
+        font-size: $fs-xlrg;
+        position: absolute;
+        left: 2px;
+        top: 12px;
+      }
+      a {
+        display: block;
+        font-weight: 600;
+        text-decoration: none;
+        text-indent: $sp-xlrg + $sp-tiny;
+        &:hover {
+          text-decoration: underline;
+        }
+        &.link-list-see-all {
+          font-size: $fs-xsmall;
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+      }
     }
   }
 }
