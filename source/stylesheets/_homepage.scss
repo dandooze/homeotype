@@ -6,6 +6,11 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
   }
 }
 
+body {
+  background-color: $c-grey-lt;
+}
+
+
 #site-index {
   padding-top: 10rem;
 }
@@ -191,6 +196,7 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
 
 
 #launchpad {
+  background-color: white;
   box-shadow: 0px -1px 1px 0px rgba(black,.2);
     ul {
       background: white;
@@ -304,6 +310,10 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
   }
 }
 
+.logos-bg {
+  background-color: white;
+}
+
 /* VIDEO SECTION */
 .kelisto-videos {
   .video-box {
@@ -351,14 +361,14 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
       color: $c-new-black;
       font-size: $fs-base;
     }
-    .link-list-title {
+    .video-list-title {
       color: $c-new-black;
       font-size: $fs-xsmall;
       font-weight: 600;
       margin: $sp-lrg 0 $sp-small;
       text-transform: uppercase;
     }
-    li.link-list-item {
+    li.video-list-item {
       border-bottom: 1px solid $c-border;
       font-size: $fs-small;
       padding: $sp-base 0;
@@ -384,7 +394,7 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
         &:hover {
           text-decoration: underline;
         }
-        &.link-list-see-all {
+        &.video-list-see-all {
           font-size: $fs-xsmall;
           font-weight: 400;
           text-transform: uppercase;
@@ -393,3 +403,64 @@ $mq-tablet-extra:          55rem;    //880px @ 16px
     }
   }
 }
+
+/* LINK LIST SECTION */
+.links-list-module {
+  background-color: white;
+  border-radius: 2px;
+  padding: $sp-tiny $sp-base;
+  @include tablet-landscape-and-up {
+    @include span-columns(3,12);
+  }
+  &.best-buy-articles {
+    box-shadow: inset 0px 2px 0px #3BA8EC;
+  }
+  &.most-viewed-articles{
+   box-shadow: inset 0px 2px 0px #1daf1e; 
+  }
+  &.dynamic-reviews{
+   box-shadow: inset 0px 2px 0px #fccd44; 
+  }
+  &.dynamic-products{
+   box-shadow: inset 0px 2px 0px #f97e3b; 
+  }
+  &:last-child {
+    @include omega;
+  }
+  h4.links-list-title {
+    color: $c-new-black;
+    font-size: $fs-xsmall;
+    text-transform: uppercase;
+  }
+  ul.link-list {
+    li {
+      display: table;
+      margin-bottom: $sp-base;
+    }
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .position {
+      display: table-cell;
+      padding-right: $sp-small;
+      span {
+        border-radius: 2px;
+        border: 1px solid #C8CFD7;
+        color: #C8CFD7;
+        display: block;
+        font-size: $fs-small;
+        font-weight: 300;
+        line-height: $fs-xlrg;
+        text-align: center;
+        width: $fs-xlrg;
+      }
+    }
+    .detail {
+      display: table-cell;
+    }
+  }
+}
+
