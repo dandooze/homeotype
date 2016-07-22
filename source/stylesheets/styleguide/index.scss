@@ -1,0 +1,24 @@
+$c-grey-border: #e0e6ed;
+
+aside {
+  background-color: white;
+  border-right: 1px solid $c-grey-border;
+  bottom: 0;
+  box-size: border-box;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 380px;
+}
+
+.main-content-wrapper {
+  box-sizing: border-box;
+}
+
+.main-content {
+  border: 1px solid aqua;
+  box-sizing: border-box;
+  max-width: 960px;
+  padding: 80px;
+}
