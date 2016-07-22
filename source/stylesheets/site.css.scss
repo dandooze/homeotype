@@ -6,3 +6,22 @@
 @import "homepage";
 @import "development-debugging";
 
+.how-it-works-bg {
+  &.odd {
+    background-color: white;
+    .how-it-works {
+      .illustration {
+        @include tablet-portrait-and-up {
+          @include span-columns(5,12);
+          @include push(6,12);
+        }
+      }
+      .how-it-works-txt {
+        @include tablet-portrait-and-up {
+          @include span-columns(5, 12);
+          @include pull(10, 12);
+        }
+      }
+    }
+  }
+}
