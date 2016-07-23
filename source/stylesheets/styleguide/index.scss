@@ -9,16 +9,22 @@ aside {
   position: fixed;
   right: 0;
   top: 0;
-  width: 380px;
+  width: 30%;
+  @include desktop-and-up {
+    width: 20%;
+  }
 }
 
 .main-content-wrapper {
-  box-sizing: border-box;
+  padding-left: 30%;
+  @include desktop-and-up {
+    padding-left: 20%;  
+  }
+  
 }
 
 .main-content {
-  border: 1px solid aqua;
-  box-sizing: border-box;
+  margin: auto;
   max-width: 960px;
-  padding: 80px;
+  padding: 80px;  
 }
