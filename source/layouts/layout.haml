@@ -12,12 +12,13 @@
     %link{:href => "https://cdn.myfontastic.com/3y4kzHjRdL98NZqht7nm4h/icons.css", :rel => "stylesheet"}/
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"}
     = stylesheet_link_tag :site
+    = stylesheet_link_tag :rouge
     = javascript_include_tag :all
   %body{:class => page_classes}
-    = partial '/layouts/components/media-query-status' 
+    = partial 'media-query-status' 
     .app 
       %aside
-        = partial '/layouts/components/sidebar' 
+        = partial 'sidebar' 
       .main-content-wrapper
         .main-content
           = yield

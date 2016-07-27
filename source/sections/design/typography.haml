@@ -1,0 +1,38 @@
+---
+title: Typography
+---
+%h1 Typography
+.section
+  %h2 Typeface
+  %p Kelisto's primary typeface is Proxima Nova — a simple, friendly font with legible numbers that that combines modern proportions with a geometric appearance. It’s clean, minimalistic and works well at different screen resolutions.
+
+  .sample-box
+    .typeface
+      A B C D E F G H I J K L M N O P Q R S T U W X Y Z 
+      a b c d e f g h i j k l m n o p q r s t u w x y z 
+      0 1 2 3 4 5 6 7 8 9 
+    .code-sample
+      :code
+        # lang: html
+          <script src="https://use.typekit.net/yiw5xpl.js"></script>
+          <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+.section
+  %h2 Font sizes
+  %p The font scale consists of 9 different font sizes. The default size applied to the body is <code class="inline">$fs-base</code>
+  .sample-box
+    .type-row 
+      %span.fs-4xlrg The quick brown fox jumps over the lazy dog
+      %span.font-specs 38px — Display 2
+    .code-sample
+      :code
+        # lang: css
+          font-size: $fs-4xlrg;
+  .sample-box
+    .type-row 
+      %span.fs-xxxlrg The quick brown fox jumps over the lazy dog
+      %span.font-specs 32px — Display 1
+    .code-sample
+      :code
+        # lang: css
+          font-size: $fs-xxxlrg;

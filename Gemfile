@@ -23,9 +23,12 @@ gem 'puma'
 # Serving static pages on heroku
 gem 'rack-contrib'
 
+# Code Highlight via Rouge
+gem "middleman-syntax"
+
 # Style & Kelistrap
 gem 'bourbon'
 gem 'susy', '~> 1.0'
 
-gem 'kelistrap' #, path: '../kelistrap'
+gem 'kelistrap', path: '../kelistrap'
 

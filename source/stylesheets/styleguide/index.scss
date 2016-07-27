@@ -1,5 +1,10 @@
 $c-grey-border: #e0e6ed;
 
+/*** BASIC LAYOUT ***/
+body {
+    background-color: white;
+}
+
 aside {
   background-color: white;
   border-right: 1px solid $c-grey-border;
@@ -27,4 +32,137 @@ aside {
   margin: auto;
   max-width: 960px;
   padding: 80px;  
+}
+
+.section {
+  clear: both;
+  padding: 0 0 $sp-xxlrg;
+}
+
+/*** ELEMENTS ***/
+h1 {
+  margin-bottom: 4rem;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: $fs-lrg;
+  margin-bottom: $sp-tiny;
+}
+
+p {
+  font-size: $fs-med;
+  line-height: $fs-xlrg;
+}
+
+dl.sidebar-menu {
+  margin: 0;
+  padding: 0;
+  dt {
+    border-bottom: 1px solid $c-grey-border;
+    font-size: $fs-lrg;
+    padding: $sp-base;
+  }
+  dd {
+    background-color: tint($c-content-bg, 40);
+    border-bottom: 1px solid $c-grey-border;
+    margin: 0;
+    padding: $sp-base 0;
+    a {
+      display: block;
+      padding: $sp-base $sp-xlrg;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+/*** COLORS ***/
+
+ul.color-palette {
+  overflow: auto;
+  padding: $sp-base $sp-tiny 0;
+  .color-item {
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0px rgba(black, .20);
+    margin-bottom: $sp-xlrg;
+    &:nth-child(4n) {
+      @include omega;
+    }
+
+    @include span-columns (1, 4);
+    .color-fill {
+      @include border-radius(4px 4px 0 0);
+      min-height: 8rem;
+      width: 100%;
+      &.patriarch { background-color: $patriarch; }
+      &.united-nations-blue { background-color: $united-nations-blue; }
+      &.forest-green { background-color: $forest-green; }
+      &.boston-university-red { background-color: $boston-university-red; }
+      &.orange { background-color: $orange; }
+      &.amber { background-color: $amber; }
+      &.pastel-blue { background-color: $pastel-blue; }
+      &.glitter { background-color: $glitter; }
+      &.anti-flash-white { background-color: $anti-flash-white; }
+      &.cadet { background-color: $cadet; }
+      &.cool-grey { background-color: $cool-grey; }
+
+    }
+    .color-data {
+      padding: $sp-small $sp-base;
+      span {
+        line-height: $fs-lrg;
+        display: block;
+        &.color-name {
+          font-weight: 600;
+        }
+        &.color-hex,
+        &.color-rgba {
+          color: $c-grey;
+          font-size: $fs-small;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
+/*** TYPOGRAPHY ***/
+code.inline {
+  background-color: $c-grey-border;
+}
+
+.sample-box {
+  border: 1px solid $c-grey-border;
+  border-radius: 4px;
+  margin-bottom: $sp-base
+}
+
+.typeface {
+  font-size: $fs-xlrg;
+  font-weight: 400;
+  padding: $sp-lrg;
+}
+
+.code-sample {
+  pre.highlight {
+    margin: 0;
+    padding: $sp-base;
+  }
+}
+
+.type-row {
+  border-bottom: 1px solid $c-grey-border; 
+  padding: $sp-lrg;
+  span {
+    font-weight: 400;
+    display: block;
+  }
+  .fs-4xlrg { font-size: $fs-4xlrg; }
+  .fs-xxxlrg { font-size: $fs-xxxlrg; }
+  .font-specs {
+    color: $c-grey;
+    font-size: $fs-small;
+  }
 }
