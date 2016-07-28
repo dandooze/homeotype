@@ -1,0 +1,32 @@
+---
+title: Spacing
+---
+%h1 Spacing
+.section
+  %h2 Typeface
+  %p Spacing can be applied using either margin or padding. There are 7 available spacing sizes: 
+
+  .sample-box
+    %ul.spacing-boxes
+      %li.spacing-item
+        .wrapper.sp-tiny
+          .content           
+      %li.spacing-item
+        .wrapper.sp-small
+          .content           
+      %li.spacing-item
+        .wrapper.sp-base
+          .content          
+      %li.spacing-item
+        .wrapper.sp-lrg
+          .content          
+      %li.spacing-item
+        .wrapper.sp-xlrg
+          .content                     
+      %li.spacing-item
+        .wrapper.sp-xxlrg
+          .content  
+    .code-sample
+      :code
+        # lang: sass
+          $sp-tiny, $sp-small, $sp-base, $sp-lrg, $sp-xlrg, $sp-xxlrg, $sp-xxxlrg 

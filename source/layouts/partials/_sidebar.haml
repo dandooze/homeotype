@@ -1,6 +1,11 @@
+.logo-box
+  %a{href: "/", title: "home"}
+    %object{:data => "/images/kelisto_logo_flat.svg", :type => "image/svg+xml"}
+    %span Styleguide
 %dl.sidebar-menu
-  %dt#item-overview Overview
-  %dt#item-design Design
-  %dd.content-design 
+  %dt#overview-item Overview
+  %dt#design-item Design
+  %dd.design-content 
     = link_to 'Color Scheme', '/sections/design/color-scheme.html'
     = link_to 'Typography', '/sections/design/typography.html'
+    = link_to 'Spacing', '/sections/design/spacing.html'
