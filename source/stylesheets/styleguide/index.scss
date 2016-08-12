@@ -70,7 +70,7 @@ p {
     width: 100px;
   }
   span {
-    color: $c-grey;
+    color: $c-body-copy;
     display: block;
     font-size: $fs-xxsmall;
     letter-spacing: .25rem;
@@ -89,7 +89,7 @@ dl.sidebar-menu {
     padding: $sp-base;
   }
   dd {
-    background-color: tint($c-content-bg, 40);
+    background-color: tint($c-bg-section, 40);
     border-bottom: 1px solid $c-grey-border;
     margin: 0;
     padding: $sp-base 0;
@@ -144,7 +144,7 @@ ul.color-palette {
         }
         &.color-hex,
         &.color-rgba {
-          color: $c-grey;
+          color: $c-body-copy;
           font-size: $fs-small;
           font-style: italic;
         }
@@ -187,7 +187,7 @@ code.inline {
   .fs-4xlrg { font-size: $fs-4xlrg; }
   .fs-xxxlrg { font-size: $fs-xxxlrg; }
   .font-specs {
-    color: $c-grey;
+    color: $c-body-copy;
     font-size: $fs-small;
   }
 }

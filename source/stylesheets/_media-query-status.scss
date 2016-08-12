@@ -30,10 +30,10 @@
       .tablet-pt { display: block;}
     }
     
-    @include tablet-extra-and-up {
-      .tablet-pt { display: none;}
-      .tablet-ex { display: block;}
-    } 
+    // @include tablet-extra-and-up {
+    //   .tablet-pt { display: none;}
+    //   .tablet-ex { display: block;}
+    // } 
     
     @include tablet-landscape-and-up {
       .tablet-ex { display: none;}

@@ -1,7 +1,7 @@
 PATH
   remote: ../kelistrap
   specs:
-    kelistrap (0.3.4)
+    kelistrap (1.0.0)
       bourbon
       sass (>= 3.2.0)
       susy (~> 1.0)
