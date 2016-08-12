@@ -30,5 +30,5 @@ gem "middleman-syntax"
 gem 'bourbon'
 gem 'susy', '~> 1.0'
 
-gem 'kelistrap', path: '../kelistrap'
+gem 'kelistrap' #, path: '../kelistrap'
 
