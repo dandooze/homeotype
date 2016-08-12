@@ -1,0 +1,468 @@
+$mq-tablet-extra:          55rem;    //880px @ 16px
+
+@mixin tablet-extra-and-up {
+@media only screen and (min-width : $mq-tablet-extra) {
+  @content;
+  }
+}
+
+body {
+  background-color: $c-grey-lt;
+}
+
+
+#site-index {
+  padding-top: 10rem;
+}
+
+#navbar {
+  background-color: rgba($c-corporate, .85);
+  box-shadow: 0px 1px 1px 0px rgba(black, .4);
+  color: white;
+  font-size: $fs-small;
+  line-height: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+}
+
+.hero {
+  height: 360px;
+  position: relative;
+  @include mobile-landscape-and-up {
+    height: 460px;
+  }
+  @include tablet-portrait-and-up {
+    height: 500px;
+  }
+  
+  @include desktop-and-up {
+    height: 540px;
+  }
+}
+
+#hero__background {
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  
+  video {
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: auto;
+    @include tablet-extra-and-up {
+      height: auto;
+      width: 100%;
+    }
+    @include tablet-landscape-and-up {
+      top: -10%;
+    }
+    
+    @include desktop-and-up {
+      @include transform(translateY(-50px));
+    }
+  }
+  &.video__cover {
+    background: none;
+    video {
+      display: block;
+    }
+  }
+
+  &.loans {
+    background-image: url("../images/prestamos-compressed.jpg");
+    background-position: left top;
+    @include tablet-landscape-and-up {
+      background-position: left 60%;
+    }
+  }
+  
+  &.mortgages {
+    background-image: url("../images/hipotecas-compressed.jpg");
+    background-position: 90% top;
+    @include tablet-portrait-and-up {
+      background-position: right bottom;
+    }
+    
+    @include desktop-and-up {
+      background-position: right 70%;
+    }
+  }
+  
+  &.bank-account {
+    background-image: url("../images/cuentas-compressed.jpg");
+    background-position: left 70%;
+  }
+  
+  &.car-insurance {
+    background-image: url("../images/seguros_coche.jpg");
+  }
+  
+  &.internet {
+    background-image: url("../images/internet_fijo.jpg");
+    background-position: left 40%;
+  }
+  
+  &.electricity {
+    background-image: url("../images/electricidad.jpg");
+    background-position: left top;
+    @include mobile-landscape-and-up {
+      background-position: left bottom;
+    }
+    @include tablet-landscape-and-up {
+      background-position: left 55%;
+    }
+  }
+  
+}
+
+.hero__content {
+  height: 100%;
+  position: relative;
+  z-index: 2;
+
+  .hero__va {
+    background-color: rgba(white, .15);
+    display: table;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .hero__ma {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .hero__text {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    @include span-columns(5,6);
+    @include mobile-landscape-and-up {
+      @include span-columns(4,6);
+      padding-top: 0;
+    }
+    @include tablet-portrait-and-up {
+      @include span-columns(6,12);
+      padding-top: 0;
+    }
+    h1 {
+      font-size: %fs-4xlrg;
+      font-weight: 600;
+      line-height: rem(40px);
+      margin-bottom: .25rem;
+    }
+  
+    h2 {
+      color: $c-new-black;
+      font-size: $fs-med;
+      font-weight: 300;
+      line-height: rem(32px);
+      margin: 0;
+      @include mobile-landscape-and-up {
+        font-size: $fs-lrg;
+      }
+      @include tablet-landscape-and-up {
+        font-size: $fs-xxlrg;
+      }
+    }
+  }
+  
+  .hero__cta {
+    @include span-columns(12,12);
+    a.btn-cta {
+      width: 100%;
+      @include mobile-landscape-and-up {
+        width: auto;
+      }
+      @include tablet-landscape-and-up {
+        font-size: $fs-med;
+        line-height: 4rem;
+      }
+    }
+    &.video__cover {
+      display: none;
+    }
+  }
+}
+
+  
+
+
+#launchpad {
+  background-color: white;
+  box-shadow: 0px -1px 1px 0px rgba(black,.2);
+    ul {
+      background: white;
+      margin-bottom: 0;
+    }
+    li.launchpad-item {
+      margin-bottom: 0;
+      min-height: 6rem;
+      text-align: center;
+      text-transform: uppercase;
+      @include span-columns(4,12);
+      &:nth-child(3n) {
+        @include omega();
+      }
+      @include tablet-portrait-and-up {
+      @include span-columns(2,12);
+      &:nth-child(3n) {
+        @include remove-omega;
+      }
+      &:nth-child(6n) {
+        @include omega;
+      }
+    }
+
+    a {
+      color: $c-new-black;
+      display: block;
+      font-size: $fs-xsmall;
+      text-align: center;
+      text-decoration: none;
+      @include tablet-landscape-and-up {
+        font-size: $fs-small;
+        padding-bottom: 1rem;
+      }
+     i {
+      display: block;
+      font-size: $fs-xxlrg;
+      padding: 1rem 0 .25rem;
+      width: 100%;
+      @include transition(all .20s ease-in-out);
+      @include tablet-landscape-and-up {
+        font-size: $fs-xxxlrg;  
+       }
+      }
+      span.launchpad-text {
+        @include transition(all .20s ease-in-out);
+        display: block;
+      }
+      &:hover {
+        color: $c-link;
+        i {
+          transform: translateY(-5px);
+        }
+        span.launchpad-text {
+          transform: translateY(-5px);
+        }
+      }
+    }
+  }
+
+}
+
+.how-it-works-bg {
+  background-color: $c-sugarpaper;
+  box-shadow: inset 0px 1px 1px 0px rgba(black,.2);
+}
+
+.kelisto-videos-bg {
+  background-color: $c-sugarpaper;
+}
+
+
+.how-it-works {
+  .illustration {
+    @include mobile-landscape-and-up {
+      @include span-columns(4,6);
+      @include pre(1,6);
+      @include post(1,6);
+      margin-bottom: 1rem;
+    }
+    @include tablet-portrait-and-up {
+      @include span-columns (5,12);
+      @include pre(1,12);
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .how-it-works-txt {
+    h3 {
+      color: $c-new-black;
+      margin-bottom: .5rem;
+      font-size: $fs-med;
+      font-weight: 600;
+    }
+    p {
+      color: $c-new-black;
+      font-size: $fs-base;
+    }
+    @include mobile-landscape-and-up {
+      @include span-columns(4,6);
+      @include pre(1,6);
+      @include post(1,6);
+    }
+    @include tablet-portrait-and-up {
+      @include span-columns(5,12);
+      @include pre(0);
+      @include post(1,12);
+    }
+  }
+}
+
+.logos-bg {
+  background-color: white;
+}
+
+/* VIDEO SECTION */
+.kelisto-videos {
+  .video-box {
+    @include mobile-landscape-and-up {
+      @include span-columns(4,6);
+      @include pre(1,6);
+      @include post(1,6);
+      margin-bottom: 1rem;
+    }
+    @include tablet-portrait-and-up {
+      @include span-columns (5,12);
+      @include pre(1,12);
+    }
+
+    // CSS needed for the youtube iframe video to be responsive
+    .video-container {
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(black, .2);
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 0; height: 0; overflow: hidden;
+    }
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+  }
+  .video-box-text {
+    @include mobile-landscape-and-up {
+      @include span-columns(4,6);
+      @include pre(1,6);
+      @include post(1,6);
+    }
+    @include tablet-portrait-and-up {
+      @include span-columns(5,12);
+      @include pre(0);
+      @include post(1,12);
+    }
+    p {
+      color: $c-new-black;
+      font-size: $fs-base;
+    }
+    .video-list-title {
+      color: $c-new-black;
+      font-size: $fs-xsmall;
+      font-weight: 600;
+      margin: $sp-lrg 0 $sp-small;
+      text-transform: uppercase;
+    }
+    li.video-list-item {
+      border-bottom: 1px solid $c-border;
+      font-size: $fs-small;
+      padding: $sp-base 0;
+      position: relative;
+      &:last-child {
+        border-bottom: none;
+        a {
+          text-indent: 0;
+        }
+      }
+      i {
+        color: $c-corporate;
+        font-size: $fs-xlrg;
+        position: absolute;
+        left: 2px;
+        top: 12px;
+      }
+      a {
+        display: block;
+        font-weight: 600;
+        text-decoration: none;
+        text-indent: $sp-xlrg + $sp-tiny;
+        &:hover {
+          text-decoration: underline;
+        }
+        &.video-list-see-all {
+          font-size: $fs-xsmall;
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+/* LINK LIST SECTION */
+.links-list-module {
+  background-color: white;
+  border-radius: 2px;
+  padding: $sp-tiny $sp-base;
+  @include tablet-landscape-and-up {
+    @include span-columns(3,12);
+  }
+  &.best-buy-articles {
+    box-shadow: inset 0px 2px 0px #3BA8EC;
+  }
+  &.most-viewed-articles{
+   box-shadow: inset 0px 2px 0px #1daf1e; 
+  }
+  &.dynamic-reviews{
+   box-shadow: inset 0px 2px 0px #fccd44; 
+  }
+  &.dynamic-products{
+   box-shadow: inset 0px 2px 0px #f97e3b; 
+  }
+  &:last-child {
+    @include omega;
+  }
+  h4.links-list-title {
+    color: $c-new-black;
+    font-size: $fs-xsmall;
+    text-transform: uppercase;
+  }
+  ul.link-list {
+    li {
+      display: table;
+      margin-bottom: $sp-base;
+    }
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .position {
+      display: table-cell;
+      padding-right: $sp-small;
+      span {
+        border-radius: 2px;
+        border: 1px solid #C8CFD7;
+        color: #C8CFD7;
+        display: block;
+        font-size: $fs-small;
+        font-weight: 300;
+        line-height: $fs-xlrg;
+        text-align: center;
+        width: $fs-xlrg;
+      }
+    }
+    .detail {
+      display: table-cell;
+    }
+  }
+}
+
